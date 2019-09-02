@@ -21,8 +21,7 @@
 
                     <ul>
                         <li><a href="/category">Make a category</a></li>
-                        <li><a href="/game">Build a game</a></li>
-                        <li><a href="/play">Play a game</a></li>
+                        <li><a href="/game">Build or play a game</a></li>
                     </ul>
                 </div>
             </div>
