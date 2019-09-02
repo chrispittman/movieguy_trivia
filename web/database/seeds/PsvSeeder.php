@@ -11,7 +11,7 @@ class PsvSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('reviews')->truncate();
+        //DB::table('reviews')->truncate();
 
         $path = base_path().'/database/seeds/psvdata.txt';
         $fn = fopen($path,"r");
