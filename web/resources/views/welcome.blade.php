@@ -81,18 +81,20 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Movie Guy Trivia
                 </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                <div>
+                    Login or Register to start.
                 </div>
+
+                <p>
+                    TODO:
+                    <ul>
+                    <li>password reset via email does not work yet.  Have to contact Chris if you forget your password</li>
+                    <li>Building a game: when listing categories, should highlight the ones that are already part of an existing game to keep you from accidentally reusing them.</li>
+                </ul>
+                </p>
             </div>
         </div>
     </body>
