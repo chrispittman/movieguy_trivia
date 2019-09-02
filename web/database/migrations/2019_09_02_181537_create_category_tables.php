@@ -17,7 +17,7 @@ class CreateCategoryTables extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->text('description');
-            $table->integer('user_id')->unsigned();
+            $table->bigInteger('user_id')->unsigned();
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users');
@@ -25,8 +25,8 @@ class CreateCategoryTables extends Migration
 
         Schema::create('category_review', function(Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('category_id')->unsigned();
-            $table->integer('review_id')->unsigned();
+            $table->bigInteger('category_id')->unsigned();
+            $table->bigInteger('review_id')->unsigned();
             $table->timestamps();
 
             $table->foreign('category_id')->references('id')->on('categories');
