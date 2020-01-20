@@ -59,14 +59,15 @@ class CategoryController extends Controller
 
     public function searchReviewCategory(Request $request, $id) {
         $search = $request->get('search');
-        $search_results = Review::where('title','LIKE','%'.$search.'%')->orderBy('title')->limit(20)->get();
-        $search_message = 'Found '.count($search_results).' films.';
+        $search_results = [];
+        $search_results['title'] = Review::where('title','LIKE','%'.$search.'%')->orderBy('title')->limit(20)->get();
+        $search_results['description'] = Review::where('description_fulltext','LIKE','%'.$search.'%')->orderBy('description_fulltext')->limit(20)->get();
 
         $category = Category::where('user_id',Auth::id())->where('id', $id)->with('reviews')->firstOrFail();
+
         return view('category/category', [
             'id'=>$id,
             'category'=>$category,
-            'search_message'=>$search_message,
             'search_results'=>$search_results
         ]);
     }
